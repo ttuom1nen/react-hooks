@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import ResourceList from "./ResourceList";
 
 const App = () => {
   const [resource, setResource] = useState("posts");
+
   return (
-    <div>
+    <div className="uk-container uk-container-small uk-position-relative">
       <div>
         <button
           style={{ display: "inline-block", margin: "4px" }}
@@ -20,7 +22,7 @@ const App = () => {
           Todos
         </button>
       </div>
-      {resource}
+      <ResourceList resource={resource} />
     </div>
   );
 };
